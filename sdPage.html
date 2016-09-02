@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盛大游戏官网</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		font-size: 12px;
+	}
+	ul,li{
+		list-style: none;
+	}
+	body{
+		overflow-y:scroll;
+	}
+	a{
+		text-decoration: none;
+		font-size: 12px;
+		color: #444444;
+	}
+	.top{
+		width: 1200px;
+		height: 90px;
+		margin: 0 auto;
+	}
+	.top-logo{
+		float: left;
+	}
+	.top-logo a{
+		display: block;
+		width: 321px;
+		height:46px;
+		background: url(http://www.shandagames.com/web/img/logo@1x.png) no-repeat;
+		margin-top: 22px;
+	}
+	.top-menu{
+		float: right;
+	}
+	.top-menu ul li{
+		float: left;
+		margin: 0 30px;
+	}
+	.top-menu ul li a{
+		display: block;
+		height: 90px;
+		line-height: 90px;
+		font-size: 18px;
+	}
+	.top-menu ul li a:hover{
+		color: #d50f19;
+	}
+	.banner{
+		width: 100%;
+		position: relative;
+	}
+	.banner-show{
+		width: 100%;
+		height: 304px;
+	}
+	.banner-show ul{
+		position: relative;
+	}
+	.banner-show ul li{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.banner-show li a{
+		display: block;
+		width: 100%;
+		height: 304px;
+	}
+	.banner-btn{
+		position: absolute;
+		z-index: 10;
+		left: 48%;
+		bottom: -30px;
+	}
+	.banner-btn a{
+		display: block;
+		width: 14px;
+		height: 14px;
+		border:2px solid #DDD;
+		border-radius: 16px;
+		float: left;
+		margin-left: 15px;
+		transition: background .5s;
+	}
+	.content{
+		width: 100%;
+		position: relative;
+	}
+	.intro{
+		width: 1240px;
+		position: relative;
+		height: 750px;
+		margin: 0 auto;
+		left: -40px;
+	}
+	.ads{
+		display: block;
+		width: 1240px;
+	}
+	.com-intro{
+		position: absolute;
+		top: 100px;
+		right: 0px;
+		width: 660px;
+		
+	}
+	.com-intro div{
+		float: left;
+		font-size: 0;
+		overflow: hidden;
+		width: 310px;
+		height: 305px;
+		overflow: hidden;
+	}
+	.com-intro .culture{
+		margin-left: 40px;
+	}
+	.com-intro .strategy{
+		margin-top: 40px;
+		width: 660px;
+	}
+	.com-intro div img{
+		text-align: center;
+		vertical-align: center;
+		transition: transform 1s;
+	}
+	.com-intro div img:hover{
+		transform: scale(1.1);
+	}
+	h2{
+		font-size: 40px;
+		text-align: center;
+		margin-top: 90px;
+	}
+	h3{
+		font-size: 20px;
+		color: #888; 
+		text-align: center;
+		margin-bottom: 90px;
+		font-weight: normal;
+	}
+	.pro-show{
+		width: 100%;
+	}
+	.pro-show ul{
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	.pro-show li {
+		width: 25%;
+		float: left;
+		font-size: 0;
+		position: relative;
+		overflow: hidden;
+	}
+	.pro-show li img{
+		width: 100%;
+	}
+	.pro-show li a{
+		font-size: 0;
+		overflow: hidden;
+	}
+	.pro-last{
+		background: #d50f19;
+	}
+	.hr-img{
+		width: 1176px;
+		margin: 0 auto;
+	}
+	.hr-btn{
+		width: 324px;
+		margin: 90px auto;
+	}
+	.hr-btn a{
+		display: block;
+		width: 324px;
+		height: 64px;
+		border: 1px solid #888;
+		border-radius: 30px;
+		text-align: center;
+		line-height: 64px;
+		font-size: 24px;
+		color: #888;
+	}
+	.hr-btn a:hover{
+		background-color: #d50f19;
+		color: #fff;
+		border:1px solid #d50f19;
+	}
+	.footer{
+		width: 100%;
+		background: #000 url(http://pic.static.sdo.com/SDGCOPYRIGHT/black/bg_b.jpg) repeat-x left top;
+	}
+	.f-inner{
+		width: 1200px;
+		height: 132px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.footer-logo{
+		width: 64px;
+		height: 66px;
+		margin: 33px 92px 33px 65px;
+		background: url(http://pic.static.sdo.com/SDGCOPYRIGHT/black/SDG_logo_b.jpg) no-repeat;
+		float: left;
+	}
+	.footer-info{
+		background: url(http://pic.static.sdo.com/SDGCOPYRIGHT/black/slice_b.jpg) no-repeat left top;
+		float: left;
+		padding: 20px 0 20px 40px;
+	}
+	.footer-info a{
+		display: block;
+		color: #888;
+		height: 22px;
+		line-height: 22px;
+	}
+	.footer-ico{
+		float: right;
+		margin-top: 40px;
+		margin-right: 80px;
+	}
+	.footer-ico ul li{
+		float: left;
+	}
+	.current{
+		background: #d50f19;
+	}
+	.show-tip{
+		opacity: 0;
+		position: absolute;
+		width: 100%;
+		height: 90px;
+		padding: 20px 0;
+		bottom: -130px;
+		font-size: 0;
+		background: rgba(213,15,25,.9);  /* 半透明颜色背景 */
+	}
+	.show-tip .show-title{
+		text-align: center;
+		font-size: 36px;
+		color: #fff;
+		margin-bottom: 8px;
+		font-weight: bold;
+	}
+	.show-tip .show-cont{
+		text-align: center;
+		font-size: 18px;
+		color: #fff;
+	}
+
+	.show-mask{
+		font-size: 0;
+		opacity: 1;
+		background-color: rgba(0,0,0,.3);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.circle-mask{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		transition: transform .5s;
+		opacity: 0;
+		z-index: 1;
+	}
+	.circle-mask:hover{
+		opacity: 1;
+		top: 0;
+		left: 0;
+		transform: scale(2.7);
+	}
+	.pro-last:hover{
+		opacity: .7;
+	}
+	</style>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="top">
+		<div class="top-logo">
+			<a href="#"></a>
+		</div>
+		<div class="top-menu">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">游戏产品</a></li>
+				<li><a href="#">新闻动态</a></li>
+				<li><a href="#">加入我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="banner-show">
+			<ul>
+				<li><a href="javascript:;" style="background: url(http://static.sdg-china.com/sdg/pic/games/index/bigeye820-160519.jpg) center center / 100% no-repeat;"></a></li>
+				<li style="opacity: 0"><a href="javascript:;" style="background: url(http://static.sdg-china.com/sdg/pic/games/index/bigeye820-2.jpg) center center / 100% no-repeat;"></a></li>
+			</ul>
+		</div>
+		<div class="banner-btn">
+			<a href="#" class="current"></a>
+			<a href="#"></a>
+		</div>
+	</div>
+	<div class="content">
+		<div class="intro">
+			<div class="ads">
+				<img src="http://static.sdg-china.com/sdg/pic/games/index/ad_0.jpg">
+			</div>
+			<div class="com-intro">
+				<div class="honor"><img src="http://static.sdo.com/shandagames/pic/index/t_1.jpg"></div>
+				<div class="culture"><img src="http://static.sdo.com/shandagames/pic/index/t_2.jpg"></div>
+				<div class="strategy"><img src="http://static.sdo.com/shandagames/pic/index/t_3.jpg"></div>
+			</div>
+		</div>
+		<div class="products">
+			<h2>游戏产品</h2>
+			<h3>Games</h3>
+			<div class="pro-show">
+				<ul>
+					<li><a href="javascript:;">
+					<img src="http://static.sdo.com/shandagames/pic/index/1.jpg?v=2016">
+					<img src="http://www.shandagames.com/web/img/cir.png" class="circle-mask">
+					<span class="show-mask"></span>
+					<div class="show-tip">
+						<p class="show-title">热血传奇</p>
+						<p class="show-cont">十六年经典 成就传奇IP</p>
+					</div>
+					</a></li>
+					<li><a href="javascript:;"><img src="http://static.sdo.com/shandagames/pic/index/2.jpg?v=2016">
+					<img src="http://www.shandagames.com/web/img/cir.png" class="circle-mask">
+					<span class="show-mask"></span>
+					<div class="show-tip">
+						<p class="show-title">热血传奇</p>
+						<p class="show-cont">十六年经典 成就传奇IP</p>
+					</div></a></li>
+					<li><a href="javascript:;"><img src="http://static.sdo.com/shandagames/pic/index/3.jpg?v=2016">
+					<img src="http://www.shandagames.com/web/img/cir.png" class="circle-mask">
+					<span class="show-mask"></span>
+					<div class="show-tip">
+						<p class="show-title">热血传奇</p>
+						<p class="show-cont">十六年经典 成就传奇IP</p>
+					</div></a></li>
+					<li><a href="javascript:;"><img src="http://static.sdo.com/shandagames/pic/index/4.jpg?v=2016">
+					<img src="http://www.shandagames.com/web/img/cir.png" class="circle-mask">
+					<span class="show-mask"></span>
+					<div class="show-tip">
+						<p class="show-title">热血传奇</p>
+						<p class="show-cont">十六年经典 成就传奇IP</p>
+					</div></a></li>
+					<li><a href="javascript:;"><img src="http://static.sdo.com/shandagames/pic/index/5.jpg?v=2016">
+					<img src="http://www.shandagames.com/web/img/cir.png" class="circle-mask">
+					<span class="show-mask"></span>
+					<div class="show-tip">
+						<p class="show-title">热血传奇</p>
+						<p class="show-cont">十六年经典 成就传奇IP</p>
+					</div></a></li>
+					<li><a href="javascript:;"><img src="http://static.sdo.com/shandagames/pic/index/6.jpg?v=2016">
+					<img src="http://www.shandagames.com/web/img/cir.png" class="circle-mask">
+					<span class="show-mask"></span>
+					<div class="show-tip">
+						<p class="show-title">热血传奇</p>
+						<p class="show-cont">十六年经典 成就传奇IP</p>
+					</div></a></li>
+					<li><a href="javascript:;"><img src="http://static.sdo.com/shandagames/pic/index/7.jpg?v=2016">
+					<img src="http://www.shandagames.com/web/img/cir.png" class="circle-mask">
+					<span class="show-mask"></span>
+					<div class="show-tip">
+						<p class="show-title">热血传奇</p>
+						<p class="show-cont">十六年经典 成就传奇IP</p>
+					</div></a></li>
+					<li class="pro-last"><a href="javascript:;"><img src="http://www.shandagames.com/web/img/index/more.png">
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="hr">
+			<h2>加入我们</h2>
+			<h3>Join Us</h3>
+			<div class="hr-img">
+				<a href="javascript:;">
+					<img src="http://static.sdo.com/shandagames/pic/index/join.jpg?v=1">
+				</a>
+			</div>
+			<div class="hr-btn">
+				<a href="javascript:;">Join Us</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="f-inner">
+			<div class="footer-logo"></div>
+			<div class="footer-info">
+				<a href="javascript:;">增值电信业务经营许可证：沪 B2-20100008</a>
+				<a href="javascript:;">网络文化经营许可证：沪网文（2014）0749-179号</a>
+				<a href="javascript:;">互联网出版许可证：新出网证（沪）字026号</a>
+				<a href="javascript:;">上海数龙科技有限公司	版权所有</a>
+			</div>
+			<div class="footer-ico">
+				<ul>
+					<li><a href="javascript:;"><img src="http://pic.static.sdo.com/SDGCOPYRIGHT/black/plc_1_b.jpg"></a></li>
+					<li><a href="javascript:;"><img src="http://static.sdg-china.com/db/pic/bao/other/shgs2.gif"></a></li>
+					<li><a href="javascript:;"><img src="http://static.sdg-china.com/copyright/pic/img_cp_jubao_b.png"></a></li>
+					<li><a href="javascript:;"><img src="http://static.sdg-china.com/copyright/pic/SDG/report.png"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	var $btn=$('.banner-btn a');
+	var $showList=$('.banner-show ul li')
+	var i=1;
+	var p=0;
+	$btn.hover(function(){
+		$(this).addClass('current').siblings().removeClass('current');
+		n=$btn.parent().find('a').index($(this));   //不能加var
+		$showList.eq(n).stop().animate({opacity:'1'},500);
+		$showList.eq(n).siblings().stop().animate({'opacity':0},500);
+	})
+	function autoPlay(){
+		$btn.eq(i).trigger('mouseover');  //trigger无法触发hover，需用moseover
+		i++;
+		if (i==2) {i=0};
+	}
+	t=setInterval(autoPlay,2500);
+
+	$('.ads img').hover(function(){   //ads悬浮改变图片
+		$(this).attr('src','http://static.sdg-china.com/sdg/pic/games/index/ad_1.jpg')
+	},function(){
+		$(this).attr('src','http://static.sdg-china.com/sdg/pic/games/index/ad_0.jpg')
+	})
+
+	var $proList=$('.pro-show ul li a');
+	$proList.hover(function(){		
+		$(this).find('.show-mask').css({opacity:0});   //使图片变亮效果
+		$(this).find('.show-tip').animate({opacity:1,bottom:0},1200);
+	},function(){
+		$(this).find('.show-mask').css({opacity:1});
+		$(this).find('.show-tip').stop().css({opacity:0,bottom:'-130px'});
+	})
+})
+</script>
+</body>
+</html>

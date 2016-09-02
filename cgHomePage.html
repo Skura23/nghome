@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.js"></script>
+	<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+		font-size: 12px;
+	}
+	ul,li{
+		list-style: none;
+	}
+	body{
+		overflow-y:scroll;
+	}
+	a{
+		text-decoration: none;
+		font-size: 12px;
+		color: #444444;
+	}
+	.header{
+		width: 100%;
+		height: 28px;
+		background: #eeeeee;
+	}
+	.inner-h{
+		margin: 0 auto;
+		width: 1000px;
+		height: 28px;
+		position: relative;
+	}
+	.welcome{
+		height: 28px;
+		line-height: 28px;
+	}
+	.h-info{
+		float: right;
+	}
+	.h-info li{
+		float: left;
+		padding-left: 13px;
+		margin-left: 7px;
+	}
+	.h-info li a{
+		display: block;
+		height: 28px;
+		line-height: 28px;
+	}
+	.h-call,.h-lang{
+		background: url(http://www.mg-pen.com/images/bg_05.jpg) no-repeat;
+	}
+	.follow-us{
+		position: relative;
+	}
+	.follow-us a{
+		display: block;
+		float: left;
+	}
+	.follow-us .wei-ico{
+		background: url(http://www.mg-pen.com/images/bg_02.jpg) no-repeat;
+		width: 43px;
+		height: 28px;
+		cursor: pointer;
+	}
+	.follow-us .sina-ico{
+		background: url(http://img.t.sinajs.cn/t4/appstyle/widget/images/followButton/bg_flbtn.png?id=1367910055834) no-repeat -63px 0;
+		width: 62px;
+		height: 22px;
+		line-height: 22px;
+		margin-top: 2px;
+	}
+	.follow-us .sina-ico span{
+		display: block;
+		float: right;
+		padding-left: 22px;
+		padding-right: 2px;
+		color: white;
+		background: url(http://img.t.sinajs.cn/t4/appstyle/widget/images/followButton/bg_flbtn.png?id=1367910055834) no-repeat -190px 5px;
+	}
+	.follow-us .fans-ico:hover{
+		color: #1582bd;
+	}
+	.follow-us .fans-ico{
+		margin-top: 3px;
+		margin-left: 6px;
+		height: 18px;
+		line-height: 18px;
+		border: 1px solid #ecd181;
+		background: -webkit-linear-gradient(top,#fef7df,#f9f9f6);
+		padding:0 5px;
+		z-index: 0;
+		cursor: pointer;
+	}
+	.fans-arrow{
+		background: url(http://img.t.sinajs.cn/t4/appstyle/widget/images/followButton/bg_flbtn.png?id=1367910055834) no-repeat -190px -16px;
+		display: block;
+		float: left;
+		width: 6px;
+		height: 7px;
+		margin-top: 10px;
+		margin-right: 
+		z-index: 20;
+		position: absolute;
+		left: 167px;
+	}
+	.neck{
+		width: 100%;
+		height: 75px;
+	}
+	.inner-n{
+		width: 1000px;
+		height: 75px;
+		margin: 0 auto;
+	}
+	.neck-logo{
+		display: block;
+		float: left;
+		width: 310px;
+		height: 75px;
+		background: url(http://www.mg-pen.com/images/bg_09.png) no-repeat;
+	}
+	.search-zone{
+		float: right;
+		height: 75px;
+		line-height: 75px;
+		position: relative;
+	}
+	.search-zone a,.search-zone span{
+		font-size: 16px;
+	}
+	.search-zone span{
+		margin-right: 10px;
+	}
+	.input-zone{
+		width: 146px;
+		height: 20px;
+		border: 1px solid #a2a2a2;
+		margin-right: 48px;
+	}
+	.search-btn{
+		width: 51px;
+		height: 22px;
+		background: url(http://www.mg-pen.com/images/bg_13.jpg) no-repeat;
+		border: none;
+		position: absolute;
+		top: 29px;
+		right: 0;
+	}
+	.nav{
+		width: 100%;
+		height: 40px;
+		background: #cd0000;
+	}
+	.inner-nav{
+		width: 1000px;
+		height: 40px;
+		margin: 0 auto;
+	}
+	.nav-list li{
+		float: left;
+		margin-right: 10px;
+	}
+	.nav-list li:hover{
+		background: #9c000c;
+	}
+	.nav-list li a{
+		display: block;
+		height: 40px;
+		padding: 0 12px;
+		line-height: 40px;
+		color: #FFFFFF;
+		font-size: 16px;
+	}
+	.nav-list .nav-home{
+		padding: 0 20px;
+	}
+	.nav-current{
+		background: #9c000c;
+	}
+	.banner{
+		height: 433px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		font-size: 0;
+	}
+	.banner ul li{
+		width: 100%;
+	}
+	.banner ul{
+		width: 100%;
+	}
+	.banner-img{
+		text-align: center;
+		width: 100%;
+
+		position: absolute;
+		z-index: -9999999;
+	}
+	.banner .l-arrow,.banner .r-arrow,.banner .l-arrow-bro,.banner .r-arrow-bro{
+		position: absolute;
+		display: block;
+		width: 40px;
+		height: 80px;
+		line-height: 80px;
+		top: 35%;
+		text-align: center;
+		font-size: 100px;
+		cursor: pointer;
+		opacity: 0.6;
+		font-weight: bold;
+	}
+	.banner .l-arrow,.banner .l-arrow-bro{
+		left: 10%;
+	}
+	.banner .r-arrow,.banner .r-arrow-bro{
+		right: 10%;
+	}
+	.l-arrow-div{
+		position: absolute;
+		width: 40px;
+		height: 80px;
+		top: 35%;
+		left: 10%
+	}
+	.r-arrow-div{
+		position: absolute;
+		width: 40px;
+		height: 80px;
+		top: 35%;
+		right: 10%;
+	}
+	.gap{
+		height: 21px;
+		width: 100%;
+		background: url(http://www.mg-pen.com/images/ax_11.jpg) repeat-x;
+	}
+	.info{
+		width: 100%;
+		height: 225px;
+	}
+	.inner-i{
+		margin: 27px auto;
+		width: 1000px;
+		height: 197px;
+		border: 1px solid #c9c9c9;
+	}
+	.inner-i>div{
+		float: left;
+		padding: 18px 13px;
+	}
+	.news{
+		width: 310px;
+		padding: 10px;
+
+	}
+	.news div,.activity div{
+		overflow: hidden;
+	}
+	.info-title{
+		height: 20px;
+		color: red;
+		font-size: 15px;
+		float: left;
+		margin-bottom: 8px;
+	}
+	.product,.map{
+		width: 200px;
+	}
+	.more{
+		display: block;
+		float: right;
+		color: red;
+		margin-top: 5px;
+		margin-right: 20px;
+		font-size: 14px;
+	}
+	.news-list{
+		border-right: 1px solid #c9c9c9;
+	}
+	.news-list li{
+		margin-top: 7px;
+	}
+	.info-search{
+		width: 136px;
+		height: 25px;
+		padding: 0 3px;
+		border:1px solid #a2a2a2;
+	}
+	.info-s-btn{
+		width: 56px;
+		height: 27px;
+		border:none;
+		text-align: center;
+		font-size: 15px;
+		color: white;
+		background: #cd0000;
+	}
+	.product div input,.map div input{
+		display: block;
+		float: left;
+	}
+	.scroll-btn {
+		float: right;
+	}
+	.scroll-btn li{
+		float: left;
+	}
+	.scroll-btn a{
+		float: left;
+		display: block;
+		background: url(http://www.mg-pen.com/js/myfocus/mf-pattern/img/mF_kdui/dots.png) no-repeat 0 0;
+		width: 16px;
+		height: 16px;
+	}
+	.scroll-wrapper{
+		width: 181px;
+		height: 106px;
+		overflow: hidden;
+		position: relative;
+	}
+	.scroll-img{
+		width: 362px;
+		height: 106px;
+		position: absolute;
+	}
+	.scroll-img li{
+		float: left;
+		position: relative;
+	}
+	.scroll-btn .current{
+		background-position: 0 -16px;
+	}
+	.info-shadow{
+		width: 1000px;
+		height: 9px;
+		background: url(http://www.mg-pen.com/images/bot_03.jpg) repeat-x;
+		margin: 0 auto;
+		margin-top: -27px;
+	}
+	.footer{
+		width: 100%;
+		height: 76px;
+		border-top:1px solid #a2a2a2;
+		margin-top: 8px;
+	}
+	.inner-f{
+		width: 1000px;
+		height: 76px;
+		margin: 0 auto;
+	}
+	.com-info{
+		float: left;
+	}
+	.com-info p{
+		margin-top: 6px;
+	}
+	.police a{
+		display: block;
+		float: right;
+		color:#939393;
+		height: 28px;
+		line-height: 28px;
+	}
+	.police img{
+		margin-top: 5px;
+		display: block;
+		float: left;
+		margin-right: 5px;
+	}
+
+	.wei-show{
+		position: absolute;
+
+		left: 572px;
+		z-index: 10;
+		display: none;
+	}
+	.wei-arrow{
+		width: 9px;
+		height: 6px;
+		display: block;
+		margin-left: 47px;
+	}
+	.wei-2dcode{
+		width: 100px;
+		border: 1px solid #aeaeae;
+	}
+
+	.media-list{
+		position: absolute;
+		z-index: 999;
+		display: none;
+	}
+	.media-list ul{
+		width: 98px;
+		background: #FFFFFF;
+		overflow: hidden;
+	}
+	.media-list ul li a{
+		display: block;
+		font-size: 14px;
+		width: 98px;
+		color: black;
+		height: 30px;
+		line-height: 30px;
+		cursor: pointer;
+	}
+	.media-list ul li{
+		width: 98px;
+	}
+	.media-list ul li a:hover{
+		color: #cd0000;
+		background: #FFFFFF;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="header">
+			<div class="inner-h">
+				<span class="welcome">您好，欢迎来到晨光!</span>
+				<ul class="h-info">
+					<li class="follow-us">
+						<a href="#">
+							关注晨光
+						</a>
+						<a class="wei-ico"></a>
+						<a class="sina-ico">
+							<span>加关注</span>
+						</a>
+						<em class="fans-arrow"></em><a class="fans-ico">228.9万</a>
+						
+					</li>
+					<li class="h-call"><a href="#">联系电话：021-57474488</a></li>
+					<li class="h-lang"><a href="#">ENGLISH</a></li>
+				</ul>
+				<div class="wei-show">
+					<img src="http://www.mg-pen.com/images/18349.png" class="wei-arrow">
+					<img src="http://www.mg-pen.com/images/chenggwx.png" class="wei-2dcode">
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="neck">
+			<div class="inner-n">
+				<a href="#" class="neck-logo"></a>
+				<div class="search-zone">
+					<a href="#">网络商城</a><span> | 订单系统</span>
+					<input class="input-zone" type="text" placeholder="晨光"></input>
+					<input class="search-btn" type="button"></input>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="inner-nav">
+				<ul class="nav-list">
+					<li><a href="#" class="nav-home nav-current">首页</a></li>
+					<li><a href="#">产品中心</a></li>
+					<li>
+						<a href="#">媒体中心</a>
+						<div class="media-list">
+							<ul>
+								<li><a href="#">晨光新闻</a></li>
+								<li><a href="#">媒体报道</a></li>
+								<li><a href="#">媒体报道</a></li>
+								<li><a href="#">媒体报道</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">服务与支持</a>
+						<div class="media-list">
+							<ul>
+								<li><a href="#">销售渠道</a></li>
+								<li><a href="#">正品鉴别</a></li>
+								<li><a href="#">常见问题</a></li>
+								<li><a href="#">加盟晨光</a></li>
+								<li><a href="#">媒体资料库</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">线上授权</a>
+						<div class="media-list">
+							<ul>
+								<li><a href="#">授权申请</a></li>
+								<li><a href="#">资料下载</a></li>
+								
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">连锁加盟</a>
+						<div class="media-list">
+							<ul>
+								<li><a href="#">发展历程</a></li>
+								<li><a href="#">连锁模式</a></li>
+								<li><a href="#">六大优势</a></li>
+								<li><a href="#">八大利益</a></li>
+								<li><a href="#">门店布局</a></li>
+								<li><a href="#">加盟案例</a></li>
+								<li><a href="#">促销推广</a></li>
+								<li><a href="#">商品结构</a></li>
+								<li><a href="#">加盟流程</a></li>
+								<li><a href="#">加盟问答</a></li>
+								<li><a href="#">加盟热线</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">关于我们</a>
+						<div class="media-list">
+							<ul>
+								<li><a href="#">晨光介绍</a></li>
+								<li><a href="#">总裁致辞</a></li>
+								<li><a href="#">品牌文化</a></li>
+								<li><a href="#">大事记</a></li>
+								<li><a href="#">社会责任</a></li>
+								<li><a href="#">联系我们</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">人才招聘</a>
+						<div class="media-list">
+							<ul>
+								<li><a href="#">人才政策</a></li>
+								<li><a href="#">个人发展</a></li>
+								<li><a href="#">快乐工作</a></li>
+								<li><a href="#">学习进阶</a></li>
+								<li><a href="#">社会招聘</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="banner">
+				<ul>
+					<li style="z-index: 1;display: block;"><a href="#"><img src="http://www.mg-pen.com/upload/201607/9bf93a87b4a34599033fa58fdf83cffd.jpg" class="banner-img"></a></li>
+					<li style="z-index: 0;display: none;"><a href="#"><img src="http://www.mg-pen.com/upload/201605/498d2967e5552504500dc52f42913fef.jpg" class="banner-img"></a></li>
+					<li style="z-index: 0;display: none;"><a href="#"><img src="http://www.mg-pen.com/upload/201604/eee6524fc401b1379550e04231177ddc.jpg" class="banner-img"></a></li>
+					
+					<li style="z-index: 0;display: none;"><a href="#"><img src="http://www.mg-pen.com/upload/201602/a2b4fd72cd7841d7bfd8446467aba5e7.jpg" class="banner-img"></a></li>
+					<li style="z-index: 0;display: none;"><a href="#"><img src="http://www.mg-pen.com/upload/201602/14308fe1dcec0be28baa58e0ed7a5e98.jpg" class="banner-img"></a></li>
+					<li style="z-index: 0;display: none;"><a href="#"><img src="http://www.mg-pen.com/upload/201503/db5b17dd77dbd6cc91acddd373ea092b.jpg" class="banner-img"></a></li>
+				</ul>
+				<div class="l-arrow-div">
+				<a class="l-arrow" style="display: none;">‹</a>
+				<a class="l-arrow-bro" style="color: #f60;display: none;">‹</a>
+				</div>
+				<div class="r-arrow-div">
+				<a class="r-arrow" style="display: none;">›</a>
+				<a class="r-arrow-bro" style="color: #f60;display: none;">›</a>
+				</div>
+			</div>
+			<div class="gap">
+				
+			</div>
+			<div class="info">
+				<div class="inner-i">
+					<div class="news">
+						<div>
+							<h3 class="info-title">晨光新闻</h3>
+							<a href="#" class="more">more></a>
+						</div>
+						<ul class="news-list">
+							<li><a href="#">2015.01.27 上海晨光文具股份有限公司（股票代码：…</a></li>
+							<li><a href="#">2016.08.12 上海市经信委领导一行莅临晨光文具调研…</a></li>
+							<li><a href="#">2016.08.02 走进青岛方所，我和米菲有个约定！</a></li>
+							<li><a href="#">2016.07.10 晨光文具连续六年入围“中国特许连锁百…</a></li>
+							<li><a href="#">2016.07.08 晨光文具助力新商业文明论坛 共话企业…</a></li>
+							<li><a href="#">2016.06.28 晨光文具精益项目推进成效显著</a></li>
+						</ul>
+					</div>
+					<div class="product">
+						<h3 class="info-title">产品查询</h3>
+						<div>
+							<input type="text" placeholder="请输入产品名称" class="info-search"></input><input type="button" class="info-s-btn" value="查询"></input>
+						</div>
+						<img src="http://www.mg-pen.com/images/bg2_50.jpg">
+					</div>
+					<div class="map">
+						<h3 class="info-title">渠道查询</h3>
+						<div>
+							<input type="text" placeholder="请输入省份查询" class="info-search"></input>
+							<input type="button" class="info-s-btn" value="查询"></input>
+						</div>
+						<img src="http://www.mg-pen.com/images/bg2_51.jpg">
+					</div>
+					<div class="activity">
+						<div>
+							<h3 class="info-title">参与活动</h3>
+							<a href="#" class="more">more></a>
+						</div>
+						<div class="scroll-wrapper">
+						<ul class="scroll-img">
+							<li><a href="#"><img src="http://www.mg-pen.com/upload/201605/4e88804a9fbf78ed60db14cdc4ebdd8e.jpg"></a></li>
+							<li><a href="#"><img src="http://www.mg-pen.com/upload/201604/723040ef6a491dab88d31640abade2b4.jpg"></a></li>
+
+						</ul>
+						</div>
+						<ul class="scroll-btn">
+							<li><a href="javascript:;" class="current"></a></li>
+							<li><a href="javascript:;"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="info-shadow"></div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="inner-f">
+				<div class="com-info">
+					<p><strong>上海晨光文具股份有限公司</strong> 版权所有</p>
+					<p>copyright 2014, Shanghai M&G Stationery INC./All Rights Reserved</p>
+				</div> 
+				<div class="police">
+					<a href="#">
+						<img src="http://www.beian.gov.cn/file/ghs.png">
+						沪公网安备 31012002002018号
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+$(function(){   
+	$('.fans-ico').hover(function(){  
+		$(this).css({color:'#1582bd'})
+	},function(){
+		$(this).css({color:'black'})
+	})
+
+	$('.wei-ico').hover(function(e){  //微信图片悬浮显示、隐藏
+		$('.wei-show').show();
+	},function(e){
+		$('.wei-show').hide();
+	})
+	$('.nav-list li').hover(function(){
+		$(this).find('div').toggle(); //下拉菜单显示、隐藏
+	})
+	var i=0;
+	var $banlist=$('.banner ul li');
+	var n=$banlist.length;
+	$('.r-arrow-div').click(function(){  //右箭头功能
+		if(!$('.banner ul li').is(':animated')){
+			i++;
+			if(i==n){				//判断图片是不是最后一张，若是，调到第一张
+				i=0;
+				$banlist.eq(i).fadeIn(800).css({'z-index':1,'display':'block'});
+				$banlist.eq(n-1).css({'z-index':0});
+				setTimeout(function(){$banlist.eq(n-1).css({display:'none'})},800);
+			}else{
+				$banlist.eq(i).fadeIn(800).css({'z-index':1,'display':'block'})
+					.prev().css({'z-index':0});
+				setTimeout(function(){$banlist.eq(i).prev().css({display:'none'})},800);
+			}
+		}
+	})
+	$('.l-arrow-div').click(function(){    //左箭头功能
+		if(!$('.banner ul li').is(':animated')){
+			i--;
+			if(i==-1){					   //判断图片是不是第一个，若是,跳到最后一张
+				i=n-1;
+				$banlist.eq(i).fadeIn(800).css({'z-index':1,'display':'block'});
+				$banlist.eq(0).css({'z-index':0});
+				setTimeout(function(){$banlist.eq(0).css({display:'none'})},800);
+			}else{
+				$banlist.eq(i).fadeIn(800).css({'z-index':1,'display':'block'})
+				$banlist.eq(i).next().css({'z-index':0});
+				setTimeout(function(){$banlist.eq(i).next().css({display:'none'})},800);
+			}
+		}
+	})
+	$('.banner').hover(function(){    //鼠标放在banner后显示箭头、停止自动滚动
+		clearInterval(t);
+		$('.l-arrow').fadeIn(300);
+		$('.r-arrow').fadeIn(300);
+	},function(){
+		$('.l-arrow').fadeOut(300);
+		$('.r-arrow').fadeOut(300);
+		t=setInterval(autoplay,3000);    
+	})
+	$('.l-arrow-div').hover(function(){    //箭头hover变色效果
+		if(!$(this).find('.l-arrow-bro').is(':animated')){
+			$(this).find('.l-arrow-bro').fadeIn(300);
+		}
+	},function(){
+		if(!$(this).find('.l-arrow-bro').is(':animated')){
+			$(this).find('.l-arrow-bro').fadeOut(300);
+		}
+	})
+	$('.r-arrow-div').hover(function(){
+		if(!$(this).find('.r-arrow-bro').is(':animated')){
+			$(this).find('.r-arrow-bro').fadeIn(300);
+		}
+	},function(){
+		if(!$(this).find('.r-arrow-bro').is(':animated')){
+			$(this).find('.r-arrow-bro').fadeOut(300);
+		}
+	})
+
+	function autoplay(){     //自动滚动banner图片
+		$('.r-arrow').trigger('click');  
+	}
+	var t=setInterval(autoplay,3000);  //设定banner滚动速度
+	
+	$('.scroll-btn li a').click(function(){  //活动图片展示
+		if(!$(this).hasClass('current') && !$('.scroll-img').is(":animated")){
+			$(this).addClass('current').parent().siblings().find('a').removeClass('current');
+			$('.scroll-img').animate({left:'-180px'},500,function(){
+				$(this).css({left:0}).append($('.scroll-img li:first-child'));
+			})
+		}
+	})
+
+	var k=1;
+	function autoScroll(){   //活动图片自动滚动
+		$('.scroll-btn li a').eq(k).trigger('click');
+		k++;
+		if(k==2){k=0};       //按钮到达最后后返回到第一个
+	}
+	p=setInterval(autoScroll,2500);  //设定滚动速度
+	var imgH=$('.banner-img').height();  //用jquery实现展示图片垂直方向相对banner居中
+	var banH=$('.banner').height();
+	var len=-(imgH-banH)/2
+	$('.banner-img').css({'top':len});
+	if(imgH>433){						//图片高度超出外框显示时居中，不超出时占满外框
+		banH=433;
+	}else{
+		banH=imgH;
+	}
+})
+
+</script>
+</html>
