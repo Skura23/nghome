@@ -1,0 +1,1006 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	font-size: 12px;
+}
+body{
+	overflow-y: scroll;
+}
+.top-menu{
+	width: 100%;
+	height: 100px;
+	opacity: .95;
+	position: absolute;
+	z-index: 9999;
+	background: #fff;
+	min-width: 1260px;
+}
+.top{
+	width: 1260px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+}
+.logo{
+	float: left;
+	height: 100px;
+}
+.logo a{
+	display: block;
+	width: 191px;
+	height: 58px;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/logo1_1c91104.png) no-repeat;
+	line-height: 100px;
+	margin-top: 21px;
+}
+.nav{
+	margin-left: 300px;
+}
+.nav li{
+	float: left;
+}
+.nav li a{
+	float: left;
+	display: block;
+	height: 100px;
+	line-height: 100px;
+	font-size: 16px;
+	color: #888;
+	position: relative;
+}
+.nav li a i{
+	width: 0;
+	height: 5px;
+	background: #cf0f32;
+	transition: all .2s;
+	display: block;
+	position: absolute;
+	top: 0;
+}
+.nav li a:hover{
+	color: #000;
+}
+.nav li a:hover i{
+	width: 100%;
+}
+.nav li span{
+	display: block;
+	float: left;
+	height: 100px;
+	line-height: 100px;
+	margin: 0 25px;
+	color: #333;
+}
+.nav-btn{
+	background: #cf1132;
+	float: right;
+	transition: all .3s;
+}
+.nav-btn a{
+	display: block;
+	width: 120px;
+	height: 120px;
+}
+.nav-btn a i{
+	display: block;
+	width: 34px;
+	height: 34px;
+	position: relative;
+	top: 43px;
+	margin: 0 auto;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/spriter/topBar_1_z_e7632fe.png) no-repeat;
+}
+.show{
+	width: 100%;
+	height: 820px;
+	min-width: 1260px;  /* 脧没鲁媒脌颅脡矛潞贸虏煤脡煤掳脳卤脽碌脛赂潞脨搂脫娄 */
+}
+.show-pic{
+	width: 100%;
+	height: 720px;
+	margin: 0 auto;
+	position: relative;
+}
+.show-pic>ul{
+	overflow: hidden;
+	width: 100%;
+}
+.show-pic>ul>li{
+	float: left;
+	width: 100%;
+	height: 820px;
+	text-align: center;
+	display: none;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -2;
+}
+.show-pic ul li a{
+	display: block;
+	width: 1260px;
+	height: 820px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.show-bot{
+	width: 100%;
+	height: 200px;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/con1_bg_a3a0206.jpg) no-repeat;
+	min-width: 1260px;
+}
+.show-news{
+	margin: 0 auto;
+	width: 1260px;
+	height: 320px;
+	position: relative;
+	top: -120px;
+	overflow: hidden;
+}
+.show-intro{
+	margin-top: 300px;
+	margin-left: 40px;
+	width: 490px;
+
+}
+.show-intro *{
+	font-size: 44px;
+	color: #fff;
+	text-align: left;
+}
+.show-intro h3{
+	border-bottom: 1px #cf1132 solid;
+	padding: 17px 0;
+}
+.show-intro p{
+	width: 480px;
+	color: #fff;
+	font-size: 16px;
+	text-align: left;
+	line-height: 2;
+	padding-top: 17px;
+}
+.show-detail{
+	display: block;
+	width: 140px;
+	height: 50px;
+	margin-top: 30px;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/btn_be7fb80.png) no-repeat;
+}
+.show-btn{
+	position: absolute;
+	right: 0;
+	bottom: 50px;
+	margin-right: 70px;
+	z-index: 999;
+}
+.show-btn li{
+	float: left;
+	margin-right: 10px;
+}
+.show-btn ul li i{
+	display: block;
+	width: 18px;
+	height: 18px;
+	background:white;
+	border: 1px solid white;
+	border-radius: 20px;
+	cursor: pointer;
+}
+.show-btn ul li i:hover{
+	width: 14px;
+	height: 14px;
+	border: 3px solid white;
+	background: #cf0f32;
+	border-radius: 18px; 
+}
+.show-news>div{
+	float: left;
+}
+.news-date{
+	width: 150px;
+	height: 320px;
+	background-color: #282b2d;
+}
+.news-date h4{
+	color: #727272;
+	font-size: 12px;
+	margin-top: 70px;
+}
+.news-date h2{
+	color: #727272;
+	font-size: 58px;
+	line-height: 60px;
+}
+.news-date span{
+	display: block;
+	width: 22px;
+	height:5px;
+	background:#cf1132;
+	margin: 18px auto;
+}
+.news-date p{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+}
+.date-num{
+	text-align: center;
+}
+.news-btn{
+	margin-top: 70px;
+	text-align: center;
+	width: 150px;
+	height: 10px;
+}
+.news-btn a{
+	display: inline-block;
+	text-align: center;
+	width: 10px;
+	height: 10px;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/spriter/index_1_z_8fedf32.png) no-repeat -37px -20px;
+	margin:0 5px;
+}
+.news-btn a:hover{
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/spriter/index_1_z_8fedf32.png) no-repeat -47px -20px;
+}
+.newspic-wra{
+	overflow: hidden;
+	width: 640px;
+	height: 320px;
+	position: relative;
+}
+.newspic-wrainner{
+	width: 1280px;
+	overflow: hidden;
+	position: absolute;
+}
+.news-pic{
+	width: 320px;
+	height: 320px;
+	position: relative;
+	float: left;
+}
+.newspic-bg{
+	top: 0;
+	position: absolute;
+	width: 320px;
+	height: 320px;
+	transition:  all .3s;
+	background-image: url(http://res.nie.netease.com/r/pic/20160830/c331b801-04f2-4c1e-bb74-edbf44f65e6f);
+	background-position: 0 0;
+}
+.newspic-bg2{
+	background-image: url(http://res.nie.netease.com/r/pic/20160826/47fa1059-43a7-4732-b009-5693beb05be3);
+	background-position: 0 0;
+}
+.newspic-bg3{
+	background-image: url(http://res.nie.netease.com/r/pic/20160831/77d7d28e-16ee-4987-a0d7-0ef409dd3fee);
+	background-position: 0 0;
+}
+.newspic-bg4{
+	background-image: url(http://res.nie.netease.com/r/pic/20160826/04f7def1-7d29-4cfe-b5cd-d717debea5c5);
+	background-position: 0 0;
+}
+.news-mask{
+	background: rgba(0,0,0,.5);
+	width: 320px;
+	height: 320px;
+	position: absolute;
+	top: 0;
+	transition: all .3s;
+}
+.news-cont{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.news-cont h3{
+	top: 20px;
+	margin-top: 30px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	transition: all .3s;
+	position: absolute;
+	width: 100%;
+}
+.news-cont h4{
+	position: absolute;
+	color: #c6c6c6;
+	font-size: 14px;
+	text-align: center;
+	width: 200px;
+	left: 50%;
+	margin-left: -100px;
+	top: 50%;
+	font-weight: normal;
+	transition: all .3s;
+}
+.news-cont p{
+	position: absolute;
+	color: #c6c6c6;
+	font-size: 14px;
+	text-align: center;
+	top:85%;
+	width: 100px;
+	margin-left: -50px;
+	left: 50%;
+	height: 30px;
+	line-height: 30px;
+	transition: all .3s;
+}
+.news-cont span{
+	position: absolute;
+	width: 100%;
+	height: 0;
+	background: #cf1132;
+	opacity: .9;
+	bottom: 0;
+	transition: all .3s;
+}
+.news-cont p strong{
+	display: inline-block;
+	padding-left: 30px;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/like3_53586ef.png) no-repeat;
+}
+.news-cont  i{
+	position: absolute;
+	display: block;
+	width: 100%;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/bg_font_top_ec5611f.png) no-repeat;
+	height: 60px;
+	top: -60px;
+	transition: all .3s;
+}
+
+.news-pic:hover .news-mask {                  /*  for news-pic's hover animation effection */
+	opacity: 0;
+}
+.news-pic:hover .news-cont i{
+	top: 0;
+}
+.news-pic:hover .news-cont span{
+	height: 37%;
+}
+.news-pic:hover .news-cont h3{
+	top: 0;
+}
+.news-pic:hover .news-cont h4{
+	top: 70%;
+	color: #fff;
+}
+.news-pic:hover .newspic-bg{
+	background-position: -20px 0;
+}
+
+
+.news-lists{
+	width: 430px;
+	height: 320px;
+	background: #282b2d;
+	padding-left: 40px;
+}
+.news-more{
+	float: right;
+	display: block;
+	width: 37px;
+	height: 37px;
+	cursor: pointer;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/spriter/index_1_z_8fedf32.png);
+}
+.news-head{
+	margin-top: 40px;
+	width: 390px;
+	font-size: 24px;
+	color: #cf0f32;
+	border-bottom: 1px #3d4041 solid;
+	padding-bottom: 14px;
+	cursor: pointer;
+}
+.news-links{
+	margin-top: 17px;
+}
+.news-links li{
+	width: 390px;
+	height: 30px;
+}
+.news-links li i{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/n-icon_c141505.png) no-repeat;
+}
+.news-links li a{
+	font-size: 14px;
+	color: #c3c3c3;
+}
+.news-links li a:hover{
+	font-weight: bold;
+	color: #fff;
+}
+.news-links li span{
+	font-size: 14px;
+	color: #727272;
+	padding-left: 3px;
+}
+.gamedown-info{
+	position: absolute;
+	transition: all .4s;
+	top: -176px;
+	opacity: 0;
+}
+.ads-bg{   
+	position: absolute;           
+	background: #cf1132;
+	opacity: 0;
+	width: 400px;
+	height: 176px;
+	z-index: 0;
+}
+.phoneg-down{
+	position: absolute;
+}
+.phoneg-down div{
+	float: left;
+	padding-top: 38px;
+}
+.gamedown-info .phoneg-down a p{
+	color: #fff;
+}
+.phoneg-down i{
+	background: url(http://res.nie.netease.com/r/pic/20160830/9e2e29fa-7d3e-4ae3-9e0a-641a022342b8) no-repeat;
+	width: 100px;
+	height: 100px;
+	margin-top: 38px;
+	margin-left: 38px;
+	display: inline-block;
+	float: left;
+}
+.phoneg-down .game-score em{
+	display: inline-block;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/score2_e281cef.png) repeat-x;
+	width: 90px;
+	height: 20px;
+	position: relative;
+	top: 4px;
+}
+.down-times{
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/hot-down-icon_66eddd9.png) no-repeat 0 8px;
+	padding-left: 15px;
+	height: 28px;
+	line-height: 28px;
+}
+.content{
+	width: 100%;
+	position:relative;
+}
+.phonegame-ads{
+	width: 100%;
+	background: #f1f1f1;
+}
+.phone-hot{
+	width: 1260px;
+	height: 30px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+.phone-hot span{
+	display: block;
+	float: left;
+	padding-left: 20px;
+	border-left: 4px #cf1132 solid;
+	font-size: 22px;
+}
+.phone-hot i{
+	display: block;
+	float: right;
+	font-size: 16px;
+	font-style: normal;
+}
+.phone-hot i em{
+	display: block;
+	float: right;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/spriter/index_1_z_8fedf32.png) -20px -37px no-repeat;
+	width: 21px;
+	height: 17px;
+	margin-left: 13px;
+}
+.phoneg-lists{
+	width: 1260px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 80px;
+
+}
+.phoneg-lists li{
+	float: left;
+	width: 400px;
+	height: 320px;
+	margin-right: 30px;
+	background: #FFF;
+	overflow: hidden;
+	position: relative;
+}
+.phoneg-lists li a{
+	display: block;
+	width: 400px;
+	height: 176px;
+}
+.phoneg-lists li h3{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.phoneg-lists li p{
+	font-size: 14px;
+	color: #9f9f9f;
+	margin-left: 27px;
+	margin-top: 6px;
+}
+.click-info span{
+	float: left;
+}
+.click-info{
+	float: right;
+}
+.phoneg-lists li .support-num{
+	display: block;
+	font-size: 12px;
+	color: #9f9f9f;
+	cursor: pointer;
+	padding-left: 35px;
+	height: 30px;
+	line-height: 30px;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/like_fe71b2c.png) no-repeat;
+}
+.phoneg-lists li .support-num:hover{
+	background-position: 0 -30px;
+}
+.phoneg-lists li .enter-home{
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/btn1_c7dd2d3.png) no-repeat 0 -30px;
+	width: 88px;
+	height: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+	display: block;
+	font-size: 12px;
+	color: #9f9f9f;
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	transition: all .4s;
+}
+.phoneg-lists li .enter-home:hover{
+	background-position: 0 0;
+	color: #fff;
+}
+.products{                /* products zone css */
+	width: 100%;
+	margin-bottom: 40px;
+}
+.pro-wrapper{
+	width: 1260px;
+	margin: 0 auto;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	overflow: hidden;
+}
+.pro-wrapper a{
+	color: #666;
+}
+.pro-wrapper>div{
+	float: left;
+}
+.pro-pc{
+
+	overflow: hidden;
+}
+.pro-pc h3,.pro-mobile h3{
+	font-size: 16px;
+	height: 16px;
+	line-height: 16px;	
+	padding: 30px 0;
+	padding-left: 40px;
+	background: #fbfbfb;
+}
+.pro-pc h3 span,.pro-mobile h3 span{
+	float: left;
+	display: inline-block;
+	height: 16px;
+	border-left: 4px solid red;
+	position: relative;
+	left: -40px;
+}
+.pro-list{
+	float: left;
+}
+.pro-list h5{
+	font-size: 14px;
+	color: red;
+	padding: 25px 0;
+	padding-left: 40px;
+	color: #c21d35;
+}
+.pro-list ul{
+	width: 314px;
+	overflow: hidden;
+}
+.pro-list ul li{
+	width: 100px;
+	line-height: 2;
+	padding-left: 40px;
+	float: left;
+}
+.pro-list ul li a{
+	font-size: 14px;
+}
+.relax-list{
+	border-left: 1px solid #eee;
+}
+.relax-list ul{
+	width: 157px;
+}
+.hot-list ul{
+	width: 157px;
+}
+.new-list ul{
+	width: 629px;
+}
+.pro-mobile{
+	border-left: 1px solid #eee;
+}
+.new-list{
+	border-left: 1px solid #eee;
+}
+.pro-tip{
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 16px;
+	margin-top: 20px;
+	font-size: 12px;
+}
+.pro-tip span{
+	float: left;
+	display: block;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/spriter/topBar_1_z_e7632fe.png) no-repeat -56px -46px;
+	padding-left: 15px;
+	margin-left: 10px;
+}
+.pro-tip .new-ico{
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/spriter/topBar_1_z_e7632fe.png) no-repeat -56px -32px;
+}
+
+.slogan{										/* slogan zone css */
+	width: 100%;
+}
+.game-slogan {
+	width: 100%;
+	height: 310px;
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/center_bg_a9bc794.jpg) no-repeat center center;
+	min-width: 1260px;
+}
+.slogan-list{
+	width: 100%;
+	min-width: 1260px;
+	overflow: hidden;
+}
+.slogan-list a{
+	display: block;
+	float: left;
+	height: 370px;
+	width: 20%;
+	position: relative;
+	
+}
+.slogan-list a div{
+	position: absolute;
+	width: 100%;
+}
+.slogan-mask{
+	height: 370px;
+	background: black;
+	opacity: .5;
+	top: 0;
+}
+.slogan-words{
+	height: 370px;
+	position: relative;
+	z-index: 3;
+
+}
+.slogan-words div{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	margin-top: -34px;
+}
+
+.slogan-words p{
+	line-height: 34px;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	color:#fff;
+}
+.slogan-color{
+	width: 100%;
+	position: absolute;
+	top: 100%;
+}
+
+.slogan-color span{
+	display: block;
+	width: 100%;
+	height: 185px;
+	background: #cf0f32;
+}
+.pcgame-ads .phone-hot .video-discuss {
+	display: inline-block;
+	border: none;
+
+}
+.pcgame-ads .phone-hot .video-discuss a{
+	display: inline-block;
+	font-size: 16px;
+	padding: 0 10px;
+	color: #272a2c;
+}
+.items{									/* items boxs css */
+	margin: 0 auto;
+	width: 1260px;
+	overflow: hidden;
+	padding: 45px 0;
+}
+.items>div{
+	float: left;
+}
+.item-box{
+	overflow: hidden;
+	margin-right: 14px;
+}
+
+.item-box>h3{
+	text-indent: 30px;
+	background:url(http://res.nie.netease.com/nie/gw/15v1/img/l-icon_01b84e0.png) 0 bottom no-repeat;
+	margin-bottom: 20px;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 16px;      
+}
+.item-box>a{
+	display: block;
+	width: 150px;
+	margin: 0 2px 2px 0;
+	float: left;
+	background: #e3e3e3;
+	padding: 10px 0;
+	transition: all .3s;
+}
+.item-box>a:hover{
+	background: #cf1132;
+}
+.item-box>a:hover>h3,.item-box>a:hover>p{
+	color: #fff;
+}
+.item-box>a>h3{
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: normal;
+	color: #222;
+}
+.item-box>a>p{
+	text-align: center;
+	line-height: 30px;
+	font-size: 12px;
+	color: gray;
+}
+.assist{
+	width: 150px;
+}
+.card{
+	width: 304px;
+}
+.safe{
+	width: 150px;
+}
+.tool{
+	width: 608px;
+	margin: 0;
+}
+.ser-menu{
+	float: left;
+}
+.ser-menu a{
+	display: inline-block;
+	padding: 0 2px;
+	color: #888;
+}
+.ser-call{
+	float: right;
+}
+.ser-call em{
+	padding-right: 50px;
+	font-style: normal;
+	color: #888;
+}
+.service{
+	width: 100%;
+	margin-top: 30px;
+}
+.service span{
+	display: inline-block;
+	font-size: 14px;
+	color: #454240;
+}
+.service>div{
+	color: #d9dde1;
+}
+.footer{                             /* footer css */
+	width: 100%;
+	height: 85px;
+	padding:20px 0;
+	background: #272a2c;
+	min-width: 1260px;
+}
+.footer *{
+	color: #fff;
+	font-size: 12px;
+}
+
+.footer-wra{
+	width: 780px;
+	height: 85px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.footer-wra>div{
+	float: left;
+}
+.com-logo{							/* footer logo zone css */
+	float: left;
+}
+.com-logo a{
+	display: inline-block;
+	height: 31px;
+}
+.home-logo{
+	width: 118px;
+	background: url(http://res.nie.netease.com/comm/NIE_copyRight/images/netease.2.png) no-repeat;
+}
+.game-logo{
+	width: 149px;
+	background: url(http://res.nie.netease.com/comm/NIE_copyRight/images/nie.2.png) no-repeat;
+}
+.wen-logo{
+	width: 46px;
+	background: url(http://res.nie.netease.com/comm/NIE_copyRight/images/wen.png) no-repeat;
+}
+.com-logo p{
+	padding-top: 10px;
+}
+.footer-menu a{								
+	padding: 0 5px;
+}
+.footer-item *,.footer-item{
+	color: #e23a3f;
+}
+.footer-rights{
+	padding-left: 5px;
+	padding-top: 4px;
+}
+.footer-rights a{
+	padding-left: 30px;
+}
+.footer-rights a:hover{
+	padding-left: 30px;
+	text-decoration: underline;
+}
+
+.pcgame-ads li a{
+	transition: all 1.2s ease-out;
+	height: 176px;
+}
+.pcgame-ads li a:hover{
+	transform: scale(1.1);
+}
+.gamepic-wra{
+	width: 400px;
+	height: 176px;
+	overflow: hidden;
+}
+.slogan-list a:hover .slogan-mask{             /* these are animation effect for slogan zone */
+	top: 100%;
+}
+.slogan-list a:hover .slogan-words div{
+	top: 75%;
+}
+.slogan-list a:hover .slogan-color{
+	top: 50%;
+}
+.slogan-list a .slogan-mask{
+	transition: all .4s linear;
+}
+.slogan-list a .slogan-words div{
+	transition: all .4s ease-out;
+}
+.slogan-list a .slogan-color{
+	transition: all .4s ease-out;
+}
+.phoneg-lists li>div:hover .gamedown-info{   /* animation for game-down when hovering */
+	opacity: 1;
+	top: 0;
+}
+.phoneg-lists li>div:hover .gamedown-info .ads-bg{
+	opacity:  .9;	
+}
+.news-btn .news-cur{
+	background: url(http://res.nie.netease.com/nie/gw/15v1/img/spriter/index_1_z_8fedf32.png) no-repeat -47px -20px;
+}
+.show-pic .show-cur{
+	z-index: -1;
+}
+.show-btn .showbtn-cur{
+	width: 14px;
+	height: 14px;
+	border: 3px solid white;
+	background: #cf0f32;
+	border-radius: 18px; 
+	display: block;
+    cursor: pointer;
+}
+.prev-pic{
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	top: 59%;
+	background: #cf0f32;
+}
+
+.next-pic{
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 59%;
+	background: #cf0f32;
+}
+.prev-pic span,.next-pic span{
+	display: block;
+	width: 50px;
+	height: 80px;
+	line-height: 80px;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+.btn-menu{
+	position: absolute;
+	left: 0;
+	top: 100px;
+	width: 1260px;
+	background: #282b2d;
+	display: none;
+}
+.btn-menu h3{
+	background: #35373a;
+	color: #dd1136;
+}
+.btn-menu *{
+	border-color: #454545;
+}
+.btn-menu a{
+	color: #c3c3c3;
+}
+.btn-menu span{
+	color:#f2ebeb
+}
